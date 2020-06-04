@@ -12,7 +12,7 @@ jobs:
     - name: piper help
       uses: SAP/project-piper-action@master
       with:
-        command: piper -help
+        command: piper --help
     - name: piper step  
       uses: SAP/project-piper-action@master
       with:
