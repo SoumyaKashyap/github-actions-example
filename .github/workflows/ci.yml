@@ -5,10 +5,14 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v1
+    - name: piper help
+      uses: SAP/project-piper-action@master
+      with:
+        command: piper -help
     - name: piper step  
       uses: SAP/project-piper-action@master
       with:
