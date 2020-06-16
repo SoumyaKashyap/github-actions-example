@@ -8,3 +8,12 @@ jobs:
     - uses: SAP/project-piper-action@master
       with:
         command: mavenBuild
+        
+        
+  Upload:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - uses: SAP/project-piper-action@master
+      with:
+        command: nexusUpload
